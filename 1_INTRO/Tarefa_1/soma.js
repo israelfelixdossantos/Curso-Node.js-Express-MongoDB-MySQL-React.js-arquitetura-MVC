@@ -1,4 +1,12 @@
-let x = 2
-let y = 5
+var readline = require("readline").createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
 
-console.log(x+y)
+readline.question("Digite um numero?", (n1) => {
+  readline.question("Digite outro numero?", (n2) => {
+    let soma = parseFloat(n1) + parseFloat(n2);
+    console.log("A soma dos numeros é " + soma);
+    readline.close();
+  });
+});
